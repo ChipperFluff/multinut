@@ -10,7 +10,7 @@ setup(
     description='A completely unnecessary multitool module.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/ChipperFluff/chipi-tool',
+    url='https://github.com/ChipperFluff/multinut',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
