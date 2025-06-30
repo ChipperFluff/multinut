@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='multinut',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[],
     author='Chipperfluff',
@@ -12,8 +12,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/ChipperFluff/multinut',
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3'
     ],
     python_requires='>=3.6',
 )
