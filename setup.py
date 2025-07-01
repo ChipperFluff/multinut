@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name='multinut',
-    version='0.1.1',
+    version='0.2.1',
     packages=find_packages(),
-    install_requires=[],
+    install_requires=["dotenv"],
     author='Chipperfluff',
     author_email='i96774080@gmail.com',
     description='A completely unnecessary multitool module.',
