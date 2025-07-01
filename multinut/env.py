@@ -118,3 +118,30 @@ class Environment:
 
     def __getitem__(self, key: str):
         return self.get(key)
+    
+
+def cast_bool(value: str) -> bool:
+    return value.strip().lower() in ("1", "true", "yes", "on")
+
+def cast_int(value: str) -> int:
+    return int(value.strip())
+
+def cast_float(value: str) -> float:
+    return float(value.strip())
+
+def cast_str(value: str) -> str:
+    return str(value)
+
+def cast_list(value: str) -> list:
+    return [item.strip() for item in value.split(",")]
+
+def cast_tuple(value: str) -> tuple:
+    return tuple(item.strip() for item in value.split(","))
+
+def cast_dict(value: str) -> dict:
+    return json.loads(value)
+
+def cast_none_or_str(value: str):
+    if value.strip().lower() in ("null", "none"):
+        return None
+    return value
