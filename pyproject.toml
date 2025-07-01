@@ -1,0 +1,24 @@
+[project]
+name = "multinut"
+version = "0.2.2"
+description = "The multi-tool nobody asked for. Includes stuff and so."
+authors = [
+    { name = "chipperfluff", email = "squirrel@chipperfluff.at" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "flask",
+    "dotenv",
+    "pywebview",
+    "PyQtWebEngine",
+    "PyQt5",
+    "qtpy"
+]
+
+[project.optional-dependencies]
+gui = [
+    "pywebview",
+    "PyQt5",
+    "qtpy"
+]

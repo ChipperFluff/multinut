@@ -102,3 +102,16 @@ All built-in cast functions handle common edge cases:
 | `cast_none_or_str` | Returns `None` if value is `null` or `None` |
 
 ---
+
+## `multinut.mc`
+
+## 🐧 Ubuntu 24.04+ (Noble) GUI Support
+
+```bash
+sudo add-apt-repository universe
+sudo apt update
+sudo apt install -y \
+  libwebkit2gtk-4.1-dev \
+  gir1.2-webkit2-4.1 \
+  python3-gi
+```
