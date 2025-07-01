@@ -23,31 +23,26 @@ class TestEnvironment(unittest.TestCase):
         Environment._instance = None
 
     def test_default_env(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(env_file_path=str(self.base_path))
         self.assertTrue(str(self.default_file) in env.env_file_path)
 
     def test_with_named_file(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(env_file_name="custom.env", env_file_path=str(self.base_path))
         self.assertTrue(str(self.named_file) in env.env_file_path)
 
     def test_with_mode_enum(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(mode=Modes.TESTING, env_file_path=str(self.base_path))
         self.assertTrue(str(self.mode_file) in env.env_file_path)
 
     def test_with_mode_string(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(mode="testing", env_file_path=str(self.base_path))
         self.assertTrue(str(self.mode_file) in env.env_file_path)
 
     def test_with_named_file_and_mode_enum(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(env_file_name="custom", mode=Modes.PRODUCTION, env_file_path=str(self.base_path))
         self.assertTrue(str(self.named_mode_file) in env.env_file_path)
@@ -58,7 +53,6 @@ class TestEnvironment(unittest.TestCase):
             Environment(env_file_name="notfound.env", env_file_path=str(self.base_path))
 
     def test_missing_file_suppressed(self):
-        print("here")
         self.reset_environment_singleton()
         env = Environment(env_file_name="notfound.env", env_file_path=str(self.base_path), suppress_file_not_found=True)
         self.assertIn("notfound.env", env.env_file_path)

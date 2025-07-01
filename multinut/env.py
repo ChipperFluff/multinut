@@ -61,7 +61,6 @@ class Environment:
             Resolves the file path for the environment file.
         """
         if isinstance(mode, Enum):
-            print(f"Using mode enum: {mode}")
             mode = mode.value
         else:
             mode = f".{mode}" if mode else ""
