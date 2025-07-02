@@ -6,13 +6,14 @@ setup(
     packages=find_packages(),
     install_requires=["dotenv"],
     author='Chipperfluff',
-    author_email='i96774080@gmail.com',
+    author_email='contact@chipperfluff.at',
     description='A completely unnecessary multitool module.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/ChipperFluff/multinut',
+    url='https://git.chipperfluff.at/Chipperfluff/Multinut',
     classifiers=[
         'Programming Language :: Python :: 3'
     ],
     python_requires='>=3.6',
+    keywords=['furry', 'squirrel', 'tcp', 'env parser', 'logger'],
 )
