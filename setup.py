@@ -10,7 +10,7 @@ setup(
     description='A completely unnecessary multitool module.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://git.chipperfluff.at/Chipperfluff/Multinut',
+    url='https://git.chipperfluff.at/projects/Multinut',
     classifiers=[
         'Programming Language :: Python :: 3'
     ],

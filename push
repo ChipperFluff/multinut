@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+VERSION="$1"
+OWNER="projects"  # Gitea username or org
+PACKAGE_NAME="multinut"
+USERNAME="Jack"
+
+if [[ -z "$VERSION" ]]; then
+    echo "Usage: $0 <version>"
+    exit 1
+fi
+
+if [[ -z "$GITEA_TOKEN" ]]; then
+    echo "❌ Please set GITEA_TOKEN environment variable"
+    echo "Example: export GITEA_TOKEN=yourtoken"
+    exit 1
+fi
+
+echo "🌰 Updating setup.py version to $VERSION"
+sed -i "s/version=['\"]\([^'\"]*\)['\"]/version='$VERSION'/g" setup.py
+
+echo "🧹 Cleaning old builds"
+rm -rf dist/ build/ *.egg-info
+
+echo "🔧 Building package..."
+python3 -m build
+
+echo "🚀 Uploading to Gitea: $OWNER/$PACKAGE_NAME $VERSION"
+twine upload \
+  --repository-url "https://git.chipperfluff.at/api/packages/$OWNER/pypi" \
+  -u "$USERNAME" \
+  -p "$GITEA_TOKEN" \
+  dist/*
+
+echo "✅ Done! Install via:"
+echo "pip install $PACKAGE_NAME --index-url https://git.chipperfluff.at/api/packages/$OWNER/pypi/simple"
