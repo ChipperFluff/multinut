@@ -1,11 +1,18 @@
 #!/bin/bash
-
 set -e
 
+# 🧪 Load .env if present
+if [ -f ".env" ]; then
+    echo "📥 Loading .env"
+    set -o allexport
+    source .env
+    set +o allexport
+fi
+
 VERSION="$1"
-OWNER="projects"  # Gitea username or org
-PACKAGE_NAME="multinut"
-USERNAME="Jack"
+OWNER="projects"           # your Gitea username or org
+PACKAGE_NAME="multinut"    # your Python package name
+USERNAME="Jack"            # your Gitea login username
 
 if [[ -z "$VERSION" ]]; then
     echo "Usage: $0 <version>"
@@ -34,5 +41,7 @@ twine upload \
   -p "$GITEA_TOKEN" \
   dist/*
 
-echo "✅ Done! Install via:"
+echo "✅ Done!"
+echo ""
+echo "📦 To install:"
 echo "pip install $PACKAGE_NAME --index-url https://git.chipperfluff.at/api/packages/$OWNER/pypi/simple"
