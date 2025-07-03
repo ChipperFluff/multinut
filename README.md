@@ -1,17 +1,12 @@
 # `multinut`
 
 ![PyPI - Version](https://img.shields.io/pypi/v/multinut)
-![Downloads - Total](https://static.pepy.tech/personalized-badge/multinut?period=total&units=international_system&left_color=black&right_color=blue)
 ![Downloads - Monthly](https://static.pepy.tech/personalized-badge/multinut?period=month&units=international_system&left_color=black&right_color=orange)
 ![Python Versions](https://img.shields.io/pypi/pyversions/multinut)
-![License](https://img.shields.io/pypi/l/multinut)
 ![Wheel](https://img.shields.io/pypi/wheel/multinut)
 ![Status](https://img.shields.io/pypi/status/multinut)
-![Docs](https://readthedocs.org/projects/multinut/badge/?version=latest)
 
 The multitool nobody asked for. Includes stuff and so.
-
-![Squirrel Approved](https://img.shields.io/badge/squirrel-approved-%F0%9F%90%BF-ff69b4)
 
 ---
 
