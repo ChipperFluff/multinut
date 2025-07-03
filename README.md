@@ -4,7 +4,6 @@
 ![Downloads - Monthly](https://static.pepy.tech/personalized-badge/multinut?period=month&units=international_system&left_color=black&right_color=orange)
 ![Python Versions](https://img.shields.io/pypi/pyversions/multinut)
 ![Wheel](https://img.shields.io/pypi/wheel/multinut)
-![Status](https://img.shields.io/pypi/status/multinut)
 
 The multitool nobody asked for. Includes stuff and so.
 
